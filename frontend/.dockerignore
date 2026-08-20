@@ -1,0 +1,25 @@
+# Dependencies - reinstalled inside the image by npm ci
+node_modules
+
+# Build output - produced by the build stage, never copied in
+dist
+
+# Env files - .env.production IS needed: webpack reads it during the build
+.env
+.env.example
+
+# Docker + git metadata
+Dockerfile
+.dockerignore
+.git
+.gitignore
+
+# Editor / OS junk
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
