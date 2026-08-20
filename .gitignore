@@ -10,6 +10,7 @@ dist/
 
 # Exception: webpack needs this at build time, and its values are inlined into
 # public JavaScript anyway, so it holds nothing secret. Never put a key here.
+!frontend/.env.production
 
 # Postgres data directory (docker volume bind mount)
 db/pgdata/
