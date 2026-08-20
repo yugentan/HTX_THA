@@ -1,0 +1,24 @@
+# Dependencies - reinstalled inside the image by npm ci
+node_modules
+
+# Build output - produced by the build stage, never copied in
+dist
+
+# Env files - runtime values come from ENV / docker run -e
+.env*
+
+# Docker + git metadata
+Dockerfile
+.dockerignore
+.git
+.gitignore
+
+# Editor / OS junk
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
