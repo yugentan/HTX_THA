@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Env files - ignore every variant, keep the example tracked
+.env*
+!.env.example
+
+# Exception: webpack needs this at build time, and its values are inlined into
+# public JavaScript anyway, so it holds nothing secret. Never put a key here.
+
+# Postgres data directory (docker volume bind mount)
+db/pgdata/
+
+# Logs
+*.log
