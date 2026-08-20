@@ -80,7 +80,7 @@ The frontend's `API_BASE_URL` is compiled **into** the bundle, so changing
 
 ---
 
-## Backend — local development
+## Backend local development
 
 Runs on **port 3000** and talks to the Postgres container. Nothing else from
 the compose stack needs to be running.
@@ -91,6 +91,7 @@ docker compose up -d postgres
 
 cd backend
 cp .env.example .env      # then fill in DATABASE_URL if your credentials differ
+cp .env.example .env.production # then fill in DATABASE_URL if your credentials differ, this is for compilation if you wish to compile locally, refer to script in package.json
 npm install
 npm run dev
 ```
@@ -138,7 +139,7 @@ Two rules are enforced on write, both returning `409`:
 - *Assumption* : In the scenario where a branch of tasks is `done`, when a subtask is set to todo/doing, the walk up to root is set as `doing`
 ---
 
-## Frontend — local development
+## Frontend local development
 
 Runs on **port 3001** and expects the backend on port 3000.
 
