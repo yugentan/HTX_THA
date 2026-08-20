@@ -5,6 +5,10 @@ import express from "express";
 import type { Express } from "express";
 import cors from "cors";
 import healthRoutes from "./routes/health.routes";
+import developerRoutes from "./routes/developer.routes";
+import taskRoutes from "./routes/task.routes";
+import skillRoutes from "./routes/skill.routes";
+import docsRoutes from "./routes/docs.routes";
 
 const app: Express = express();
 const PORT: Number = Number(process.env.PORT) || 3000;
@@ -25,7 +29,10 @@ app.use(
 app.use(express.json());
 
 app.use(healthRoutes);
-
+app.use(developerRoutes);
+app.use(taskRoutes);
+app.use(skillRoutes);
+app.use(docsRoutes);
 
 app.listen(PORT, () => {
   console.log(
