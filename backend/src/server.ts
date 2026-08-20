@@ -4,6 +4,7 @@ import { ENV_FILE } from "./config/env";
 import express from "express";
 import type { Express } from "express";
 import cors from "cors";
+import healthRoutes from "./routes/health.routes";
 
 const app: Express = express();
 const PORT: Number = Number(process.env.PORT) || 3000;
@@ -22,6 +23,8 @@ app.use(
 );
 
 app.use(express.json());
+
+app.use(healthRoutes);
 
 
 app.listen(PORT, () => {
